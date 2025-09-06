@@ -1,5 +1,5 @@
 # PinTu
-[![License](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
+![Static Badge](https://img.shields.io/badge/raraCai-pintu?label=Author&link=https%3A%2F%2Fgithub.com%2FraraCai)
 
 > 版权所有 © 2025 Yuxuan Cai - 采用 [MIT许可证授权](LICENSE)  
 > Copyright © 2025 Yuxuan Cai - Licensed under [MIT.License](LICENSE)  
