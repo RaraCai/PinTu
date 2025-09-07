@@ -22,18 +22,18 @@ app = Flask(
     static_folder='public', 
     static_url_path='/public'
 )
-app.secret_key = "123456789"
+app.secret_key = "" # 请将此替换为您的APP密钥
 
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 metadata = MetaData()
 
 # 配置 JWT 密钥和过期时间
-JWT_SECRET = "pintu12345" 
+JWT_SECRET = "" # 请将此替换为您自己的JWT密钥 
 JWT_EXPIRATION_DELTA = timedelta(hours=2)  # Token 有效期为 2 小时
 
 # 配置高德api key
-gd_key="548e5f4c1ad1f4c09ac6be8c9ba5ea49"
+gd_key="" # 请将此替换为您自己申请的API密钥
 
 # 配置上传文件夹路径
 app.config["UPLOAD_FOLDER"] = os.path.join(os.getcwd(), 'public/uploads')
@@ -47,19 +47,19 @@ os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 app.config["MAIL_SERVER"] = "smtp.qq.com"  # 邮件服务器
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USERNAME"] = "1812003940@qq.com"  # 邮箱
+app.config["MAIL_USERNAME"] = ""  # 请将此替换为您自己的邮箱
 app.config["MAIL_PASSWORD"] = "pfldmgtxqnrpgjie"  # 邮箱授权码
-app.config["MAIL_DEFAULT_SENDER"] = "1812003940@qq.com"  # 邮箱
+app.config["MAIL_DEFAULT_SENDER"] = ""  # 请将此替换为您自己的邮箱
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=60)
 mail = Mail(app)
 
 # MySQL 数据库连接配置
 db_config={
     'user':'root',
-    'password':'20040616',#这里改成自己的数据库密码
+    'password':'',# 这里改成自己的数据库密码
     'host':'localhost',
     'port':3306,
-    'database': 'pintu',#这里改成自己的数据库名字
+    'database': '',# 这里改成自己的数据库名字
     'charset':'utf8mb4'
     }
 # 创建数据库连接
